@@ -5,6 +5,11 @@
   --dark:rgb(44, 44, 44);
   --shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.1);
 }
+a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 700;
+}
 body {
   margin: 0;
   padding: 0;
