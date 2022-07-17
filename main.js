@@ -2,6 +2,9 @@
 1. Create a webpage with a 16x16 grid of square divs. 
 2.  Set up a “hover” effect so that the grid divs change color when your mouse passes over them, leaving a (pixelated) trail through your grid like a pen would.
 3. Add a button to the top of the screen that will send the user a popup asking for the number of squares per side for the new grid.
+
+5.Extra Credit
+Instead of just changing the color of a square from black to white (for example), have each pass through with the mouse change it to a completely random RGB value.
 */
 let container = document.querySelector('.container');
 let resetButton = document.querySelector('.reset');
@@ -41,8 +44,6 @@ function reSet() {
 }
 
 function changeColor(){
-  //console.log(i);
-  //this.classList.add('black');
   
   if (color === 'random') {
     let r = Math.floor(Math.random() * 255);
@@ -70,7 +71,5 @@ function changeSize() {
   
 }
 
-//let blocks = document.querySelectorAll('.block');
-gridButton.addEventListener('click', changeSize);
 
-//blocks.forEach(block => block.addEventListener('mouseover', changeColor))
+gridButton.addEventListener('click', changeSize);
