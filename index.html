@@ -8,11 +8,26 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
-  </div>
-  <button class="reset">Reset</button>
-  <button class="grid">Grid</button>
-  <button class="random">Random</button>
+  <header class="max">
+    <h1>Etch A Sketch</h1>
+  </header>
+  <main class="max">
+    <div class="container">
+    </div>
+    <div class="buttons">
+      <button class="black" onclick="colorSwap('black')">Black</button>
+      <button class="random" onclick="colorSwap('random')">Random</button>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" oninput="colorSwap(this.value)">
+      <button class="erase" onclick="colorSwap('white')">Erase</button>
+      <button class="reset">Reset</button>
+      <button class="grid">Grid</button>
+    </div>
+    
+  </main>
+  <footer class="max">
+    <p>Created by Me</p>
+    <p>Powered by <a href="">GitHub</a></p>
+  </footer>
   <script src="main.js"></script>
 </body>
 </html>

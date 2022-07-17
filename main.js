@@ -7,7 +7,7 @@ let container = document.querySelector('.container');
 let resetButton = document.querySelector('.reset');
 let gridButton = document.querySelector('.grid');
 let randomButton = document.querySelector('.random');
-
+let color = 'black';
 
 
 function boardCreate(input) {
@@ -40,15 +40,26 @@ function reSet() {
   blocks.forEach(block => block.style.cssText = 'background: none; ');
 }
 
-function changeColor(i){
+function changeColor(){
   //console.log(i);
   //this.classList.add('black');
- 
-    this.style.cssText = 'background: black; ';
+  
+  if (color === 'random') {
+    let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+    this.style.cssText = `background: rgb(${r}, ${g}, ${b}); `;
+  } else {
+    this.style.cssText = `background: ${color}; `;
+  }
+  
+  
  
 }
 
-
+function colorSwap(choice) {
+  color = choice;
+}
 function changeSize() {
   let size = prompt('Enter number between 2 and 100:');
   if (size > 2 && size < 100) {
